@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 450px 450px;
+    border-radius: 8px;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.img-fig {
+    height:inherit;
+}
+
+.img-fig img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+    padding: 3rem;
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+}
+
+.hero p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: hsla(0, 0%, 0%, 0.466);
+    line-height: 1.5rem;
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+    letter-spacing:0.2rem;
+}
+
+.hero h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 5vw, 3rem);
+    color: hsla(0, 0%, 0%, 0.808);
+}
+
+.hero .desc {
+    letter-spacing: normal;
+    font-weight: 400;
+    line-height: clamp(1rem, 3vw, 2rem);
+}
+
+
+
+.hero .price {
+    display: flex;
+    gap: 2rem;
+}
+
+.hero .price h1{
+    color:  hsl(158, 36%, 37%);
+}
+
+.hero .price p{
+    align-self: center;
+    letter-spacing: normal;
+    text-decoration: line-through;
+}
+
+
+.hero .cart-btn{
+    background-color: hsl(158, 42%, 18%);
+    height: clamp(2.5rem, 5vw, 4rem);
+    border: none;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.6rem, 3vw, 1.2rem);
+    color: hsl(0, 0%, 90%);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.hero .cart-btn:hover{
+    background-color: hsl(158, 36%, 37%);
+    color: hwb(0 100% 0%);
+}
+
+
+
+
+.hero .cart-btn img {
+    fill: white;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* ===========================
+   MOBILE DEVICES
+   =========================== */
+
+
+/* Small phones (375px) */
+
+
+@media (max-width: 375px) {
+    body{
+        height: 120vh;
+        padding: 1rem;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        max-width: 90%;
+    }
+
+    .img-fig{
+        height: 50rem;
+        background-image: url("image-product-mobile.jpg");
+        background-size: cover;        /* make the image cover the container */
+        background-position: center;   /* center the image */
+        background-repeat: no-repeat;  /* prevent repeating */
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+    }
+
+    .img-fig img {
+        display: none;
+    }
+
+
+    .hero{
+        padding: 1.5rem;
+        gap: 2rem;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+    }
+    
+    .hero .cart-btn{
+        height:3rem;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.7rem;
+    }
+
+    .hero .cart-btn img {
+        height: 2.3vh;
+        width: 5vw;
+        fill: white;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+}
+/* Regular phones (376px – 413px) */
+@media (min-width: 376px) and (max-width: 413px) {
+
+    body{
+        height: 170vh;
+     
+       padding: 2rem;
+    }
+    
+    .img-fig{
+        height: 60vh;
+        background-image: url("image-product-mobile.jpg");
+        background-size: cover;        /* make the image cover the container */
+        background-position: center;   /* center the image */
+        background-repeat: no-repeat;  /* prevent repeating */
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+    }
+
+    .img-fig img {
+        display: none;
+    }
+
+.container{
+    display: grid;
+    grid-template-columns: 350px;
+    border-radius: 8px;
+    max-height: auto;
+    overflow: hidden;
+}
+
+
+}
+
+/* Large phones / phablets (414px – 480px) */
+@media (min-width: 414px) and (max-width: 480px) {
+
+    body{
+        height: 140vh;
+     
+       padding: 2rem;
+        }
+
+    .container{
+        display: grid;
+        grid-template-columns: 390px;
+        border-radius: 8px;
+        max-height: auto;
+        overflow: hidden;
+    }
+    
+    .img-fig{
+        height: 60vh;
+        background-image: url("image-product-mobile.jpg");
+        background-size: cover;        /* make the image cover the container */
+        background-position: center;   /* center the image */
+        background-repeat: no-repeat;  /* prevent repeating */
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+    }
+
+    .img-fig img {
+        display: none;
+    }
+
+    
+    .hero{
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+    }
+
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+     body{
+        height: 120vh;
+     
+       padding: 2rem;
+        }
+
+    .container{
+        display: grid;
+        grid-template-columns: 450px;
+        border-radius: 8px;
+        max-height: auto;
+        overflow: hidden;
+    }
+    
+    .img-fig{
+        height: 60vh;
+        background-image: url("image-product-mobile.jpg");
+        background-size: cover;        /* make the image cover the container */
+        background-position: center;   /* center the image */
+        background-repeat: no-repeat;  /* prevent repeating */
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+    }
+
+    .img-fig img {
+        display: none;
+    }
+
+    
+    .hero{
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+    }
+
+
+
+}
+
+
+/* ===========================
+   TABLETS
+   =========================== */
+
+/* Portrait tablets (768px – 800px) */
+@media (min-width: 768px) and (max-width: 800px) {
+
+     body{
+        height: 120vh;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 650px;
+        border-radius: 8px;
+        max-height: auto;
+        overflow: hidden;
+    }
+    
+    .img-fig{
+        height: 60vh;
+        background-image: url("image-product-mobile.jpg");
+        background-size: cover;        /* make the image cover the container */
+        background-position: center;   /* center the image */
+        background-repeat: no-repeat;  /* prevent repeating */
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+    }
+
+    .img-fig img {
+        display: none;
+    }
+
+    
+    .hero{
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+    }
+
+
+}
+
+
+/* Landscape tablets (801px – 1024px) */
+@media (min-width: 801px) and (max-width: 1024px) {
+
+     body{
+        height: 120vh;
+        padding: 2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 780px;
+        border-radius: 8px;
+        max-height: auto;
+        overflow: hidden;
+    }
+    
+
+    .img-fig {
+        height: 60vh;
+        background-image: url("image-product-mobile.jpg");
+        background-size: cover;        /* make the image cover the container */
+        background-position: center;   /* center the image */
+        background-repeat: no-repeat;  /* prevent repeating */
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;    
+    }
+
+    .img-fig img{
+        display: none;
+    }
+    
+    .hero{
+        font-size: 2rem;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+    }
+
+
+}
