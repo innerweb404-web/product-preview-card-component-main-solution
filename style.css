@@ -24,7 +24,7 @@ body{
     display: grid;
     grid-template-columns: 450px 450px;
     border-radius: 8px;
-    height:max-content;
+    max-height:min-content;
     overflow: hidden;
 }
 
