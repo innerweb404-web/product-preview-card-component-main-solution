@@ -130,7 +130,6 @@ body{
     .container{
         display: flex;
         flex-direction: column;
-        min-height: auto;
         max-width: 90%;
     }
 
@@ -176,8 +175,7 @@ body{
 
     body{
         height: 170vh;
-     
-       padding: 2rem;
+        padding: 2rem;
     }
     
     .img-fig{
@@ -210,15 +208,13 @@ body{
 
     body{
         height: 140vh;
-     
-       padding: 2rem;
-        }
+        padding: 2rem;
+    }
 
     .container{
         display: grid;
         grid-template-columns: 390px;
         border-radius: 8px;
-        max-height: auto;
         overflow: hidden;
     }
     
@@ -250,9 +246,8 @@ body{
 @media (min-width: 481px) and (max-width: 767px) {
      body{
         height: 120vh;
-     
-       padding: 2rem;
-        }
+        padding: 2rem;
+    }
 
     .container{
         display: grid;
@@ -306,7 +301,6 @@ body{
         display: grid;
         grid-template-columns: 650px;
         border-radius: 8px;
-        max-height: auto;
         overflow: hidden;
     }
     
@@ -347,7 +341,6 @@ body{
         display: grid;
         grid-template-columns: 780px;
         border-radius: 8px;
-        max-height: auto;
         overflow: hidden;
     }
     
