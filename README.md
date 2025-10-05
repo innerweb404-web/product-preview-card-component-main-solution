@@ -42,9 +42,9 @@ See hover and focus states for interactive elements.
 
 Links
 
-Solution URL: GitHub Repository
+Solution URL:[ GitHub Repository](https://github.com/innerweb404-web/product-preview-card-component-main-solution.git)
 
-Live Site URL: View Live Site
+Live Site URL: [View Live Site](https://innerweb404-web.github.io/product-preview-card-component-main-solution/)
 
 ## My Process
 Built With
