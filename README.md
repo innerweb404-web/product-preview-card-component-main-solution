@@ -57,7 +57,7 @@ Flexbox
 
 CSS Grid
 
-Desktop-first workflow
+Mobile-first workflow
 
 Responsive design with media queries
 
@@ -79,24 +79,40 @@ Key highlights:
 Example snippet of responsive CSS for mobile devices:
 ```css
 
-@media (max-width: 375px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 90%;
-  }
-  .img-fig {
-    height: 50rem;
-    background-image: url("image-product-mobile.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 0.8rem 0.8rem 0 0;
-  }
-  .hero .cart-btn {
-    height: 3rem;
-    border-radius: 10px;
-    font-size: 0.7rem;
-  }
+
+@media (min-width:1024px) {
+    
+    .container{
+        display: grid;
+        grid-template-columns: 500px 500px;
+        column-gap: 0;
+        height: 50vh;
+        max-width: 1000px;
+        justify-items: center;
+        align-items: center;
+    }
+    .img-fig {
+        background-image: url('image-product-desktop.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        width: 100%;
+    }
+
+    .img-fig img {
+        display: none;
+    }
+
+    .hero {
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
 }
 ```
 
@@ -122,7 +138,7 @@ Author
 
 Name: Bright AG
 
-Frontend Mentor: @nnerweb404-web
+Frontend Mentor: @innerweb404-web
 
 Twitter: @brigtWeb_3
 

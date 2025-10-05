@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,500;1,500&display=swap');
 
 * {
     margin: 0;
@@ -7,366 +8,135 @@
     box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
 
+/*
+===============
+
+for screen size max-width:375
+
+===============
+*/
+
+
+
+/*
+============
+Basic Styles
+============
+*/
 body{
+    background-color:  hsl(30, 38%, 92%);
+    padding: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(30, 38%, 92%);
-    flex-direction: column;
     height: 100vh;
+    padding: 1rem;
+}
+h1 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: normal;
+    word-spacing: 4px;
+    color: rgba(0, 0, 0, 0.308);
+    word-spacing: 2px;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 450px 450px;
-    border-radius: 8px;
-    max-height:min-content;
-    overflow: hidden;
-}
-
-.img-fig {
-    height:inherit;
-}
-
-.img-fig img {
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
+img {
     display: block;
 }
 
-.hero {
+/*
+=====================
+Styling the container
+=====================
+*/
+
+.container {
     display: flex;
     flex-direction: column;
-    gap:2.5rem;
-    padding: 3rem;
-    background-color: hsl(0, 0%, 100%);
-    height: 100%;
+    width: 100%;
+    height:100%;
 }
 
-.hero p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: hsla(0, 0%, 0%, 0.466);
-    line-height: 1.5rem;
-    font-size: clamp(0.8rem, 3vw, 1.2rem);
-    letter-spacing:0.2rem;
+.img-fig {
+    height: 40%;
 }
 
-.hero h1{
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: clamp(1.7rem, 5vw, 3rem);
-    color: hsla(0, 0%, 0%, 0.808);
+.img-fig img{
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
 }
 
-.hero .desc {
-    letter-spacing: normal;
-    font-weight: 400;
-    line-height: clamp(1rem, 3vw, 2rem);
+.hero {
+    background-color: white;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.3rem;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
 }
 
-
+.hero .perf{
+    letter-spacing: 4px;
+}
 
 .hero .price {
     display: flex;
-    gap: 2rem;
+    gap: 1rem
 }
 
 .hero .price h1{
     color:  hsl(158, 36%, 37%);
 }
-
 .hero .price p{
     align-self: center;
-    letter-spacing: normal;
     text-decoration: line-through;
 }
 
-
-.hero .cart-btn{
-    background-color: hsl(158, 42%, 18%);
-    height: clamp(2.5rem, 5vw, 4rem);
-    border: none;
-    border-radius: 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: clamp(0.6rem, 3vw, 1.2rem);
-    color: hsl(0, 0%, 90%);
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.hero .cart-btn:hover{
+.hero .cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: hsl(158, 36%, 37%);
-    color: hwb(0 100% 0%);
-}
-
-
-
-
-.hero .cart-btn img {
-    fill: white;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-}
-
-/* ===========================
-   MOBILE DEVICES
-   =========================== */
-
-
-/* Small phones (375px) */
-
-
-@media (max-width: 375px) {
-    body{
-        height: 120vh;
-        padding: 1rem;
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        max-width: 90%;
-    }
-
-    .img-fig{
-        height: 50rem;
-        background-image: url("image-product-mobile.jpg");
-        background-size: cover;        /* make the image cover the container */
-        background-position: center;   /* center the image */
-        background-repeat: no-repeat;  /* prevent repeating */
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-    }
-
-    .img-fig img {
-        display: none;
-    }
-
-
-    .hero{
-        padding: 1.5rem;
-        gap: 2rem;
-        border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0.8rem;
-    }
-    
-    .hero .cart-btn{
-        height:3rem;
-        border: none;
-        border-radius: 10px;
-        font-size: 0.7rem;
-    }
-
-    .hero .cart-btn img {
-        height: 2.3vh;
-        width: 5vw;
-        fill: white;
-        margin-right: 0.5rem;
-        vertical-align: middle;
-    }
-}
-/* Regular phones (376px – 413px) */
-@media (min-width: 376px) and (max-width: 413px) {
-
-    body{
-        height: 170vh;
-        padding: 2rem;
-    }
-    
-    .img-fig{
-        height: 60vh;
-        background-image: url("image-product-mobile.jpg");
-        background-size: cover;        /* make the image cover the container */
-        background-position: center;   /* center the image */
-        background-repeat: no-repeat;  /* prevent repeating */
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-    }
-
-    .img-fig img {
-        display: none;
-    }
-
-.container{
-    display: grid;
-    grid-template-columns: 350px;
+    border: none;
     border-radius: 8px;
-    max-height: auto;
-    overflow: hidden;
+    padding: 1rem;
+    gap: 8px;
+    transition: all 0.3s ease;
 }
 
-
+.hero .cart-btn:active {
+    background-color: hsl(158, 42%, 18%);
 }
 
-/* Large phones / phablets (414px – 480px) */
-@media (min-width: 414px) and (max-width: 480px) {
-
-    body{
-        height: 140vh;
-        padding: 2rem;
-    }
-
-    .container{
-        display: grid;
-        grid-template-columns: 390px;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    
-    .img-fig{
-        height: 60vh;
-        background-image: url("image-product-mobile.jpg");
-        background-size: cover;        /* make the image cover the container */
-        background-position: center;   /* center the image */
-        background-repeat: no-repeat;  /* prevent repeating */
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-    }
-
-    .img-fig img {
-        display: none;
-    }
-
-    
-    .hero{
-        padding: 1.5rem;
-        gap: 1.5rem;
-        border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0.8rem;
-    }
-
-
+.hero .cart-btn p{
+    color: white;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-     body{
-        height: 120vh;
-        padding: 2rem;
-    }
-
-    .container{
-        display: grid;
-        grid-template-columns: 450px;
-        border-radius: 8px;
-        max-height: auto;
-        overflow: hidden;
-    }
-    
-    .img-fig{
-        height: 60vh;
-        background-image: url("image-product-mobile.jpg");
-        background-size: cover;        /* make the image cover the container */
-        background-position: center;   /* center the image */
-        background-repeat: no-repeat;  /* prevent repeating */
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-    }
-
-    .img-fig img {
-        display: none;
-    }
-
-    
-    .hero{
-        padding: 1.5rem;
-        gap: 1.5rem;
-        border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0.8rem;
-    }
-
-
-
+.hero .cart-btn img{
+    width: 6%;
+    height: 90%;
 }
 
-
-/* ===========================
-   TABLETS
-   =========================== */
-
-/* Portrait tablets (768px – 800px) */
-@media (min-width: 768px) and (max-width: 800px) {
-
-     body{
-        height: 120vh;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-    }
-    .container{
-        display: grid;
-        grid-template-columns: 650px;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    
-    .img-fig{
-        height: 60vh;
-        background-image: url("image-product-mobile.jpg");
-        background-size: cover;        /* make the image cover the container */
-        background-position: center;   /* center the image */
-        background-repeat: no-repeat;  /* prevent repeating */
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-    }
-
-    .img-fig img {
-        display: none;
-    }
-
-    
-    .hero{
-        padding: 1.5rem;
-        gap: 1.5rem;
-        border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0.8rem;
-    }
-
-
-}
-
-
-/* Landscape tablets (801px – 1024px) */
-@media (min-width: 801px) and (max-width: 1024px) {
-
-     body{
-        height: 120vh;
-        padding: 2rem;
-    }
-    .container{
-        display: grid;
-        grid-template-columns: 780px;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    
-
-    .img-fig {
-        height: 60vh;
-        background-image: url("image-product-mobile.jpg");
-        background-size: cover;        /* make the image cover the container */
-        background-position: center;   /* center the image */
-        background-repeat: no-repeat;  /* prevent repeating */
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;    
-    }
-
-    .img-fig img{
-        display: none;
-    }
-    
-    .hero{
-        font-size: 2rem;
-        padding: 1.5rem;
-        gap: 1.5rem;
-        border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0.8rem;
-    }
-
-
-}
